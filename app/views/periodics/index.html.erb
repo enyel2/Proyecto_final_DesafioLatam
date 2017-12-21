@@ -1,0 +1,27 @@
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Atomic Number</th>
+      <th>Atomic Weight</th>
+      <th>Physical State</th>
+      <th colspan="4"></th>
+    </tr>
+  </thead>
+
+	<tbody>
+		<% @periodics.each do |periodic| %>
+			<tr>
+				<td><%= periodic.name %></td>
+				<td><%= periodic.atomic_number %></td>
+				<td><%= periodic.atomic_weight.to_f %></td>
+				<td><%= periodic.Physical_state %></td>
+			</tr>
+		<% end %>
+	</tbody>
+  </tbody>
+	
+	<td><%= link_to 'Videos de Historia de Química', periodics_index2_path, method: :get %></td>
+
+</table>
